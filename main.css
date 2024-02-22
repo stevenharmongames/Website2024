@@ -1,0 +1,516 @@
+html{
+    background: #fff;
+}
+
+body{
+    background: #fff;
+    color: #545454;
+    font-family: "DengXian", DengXian, Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 2em 2em 4em;
+}
+
+h1{
+    text-align: center;
+    color: #222;
+    font-size: 2.4em;
+    font-weight: 600;
+    line-height: 0;
+}
+
+h2{
+    text-align: center;
+    font-weight: 100;
+    font-size: 1em;
+    line-height: 1;
+    font-family: serif;
+    font-style: italic;
+}
+
+h3{
+    text-align: center;
+    font-weight: 100;
+    font-family: "Segoe UI", Segoe, sans-serif;
+}
+
+h4{
+    text-align: center;
+    font-weight: 100;
+    font-size: .7em;
+    line-height: 1;
+    font-family: serif;
+    font-style: italic;
+}
+
+h5{
+    font-family: "Bahnschrift", Bahnschrift, sans-serif;
+    font-size: 12px;
+    line-height: normal;
+    margin-top: 1em;
+    margin-bottom: 0em;
+    color: #545454;
+}
+
+h6{
+    font-weight: 100;
+    font-family: "Gotham", Gotham, sans-serif;
+    font-size: 1.25em;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.jobtitle{
+    font-size: 1.05em;
+    display:inline;
+}
+
+.gametitle{
+    font-weight: 600;
+    display: inline;
+}
+
+.gamedesc{
+    font-size: .9em;
+    font-family: "Bahnschrift", Bahnschrift, sans-serif;
+    font-weight: 300;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.gamedesc2{
+    font-size: .9em;
+    font-family: "Bahnschrift", Bahnschrift, sans-serif;
+    font-weight: 300;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: inline;
+}
+
+.blktxt{
+    color: black;
+    display:inline;
+    font-weight: 800;
+    font-size: 1.15em;
+}
+
+.year{
+    font-size: 1.05em;
+    display: inline;
+    float: right;
+    margin: 0px;
+}
+
+img{
+    margin: 1em auto;
+    max-width: 100%;
+}
+
+.non-click{
+    pointer-events: none;
+    cursor:default;
+}
+
+.topnav {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    font-family: "Bahnschrift", Bahnschrift, sans-serif;
+}
+
+.topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 4px 6px;
+    margin-top: 0px;
+    text-decoration: none;
+    font-size: 17px;
+    border: 1px solid #000000;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.topactive {
+    background-color: #000000;
+    color: white;
+}
+
+.topnav-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.topnav-right {
+    float: right;
+}
+
+li{
+    list-style-position: outside;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+.abouthr{
+    margin-top: 0px;
+    margin-bottom: -35px;
+    position: relative;
+    top: -30px;
+    width: 80%;
+    float: right;
+}
+
+.reshr{
+    margin-top: 0px;
+    margin-bottom: -35px;
+    position: relative;
+    top: -16px;
+    width: 70%;
+    float: right;
+}
+
+.p2{
+    font-size: .8em;
+    align-content: center;
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 4px;
+    margin-left: 0px;
+    margin-right: 0px;
+    line-height: 1em;
+    clear: both;
+}
+
+#gamesh1{
+    text-align: center;
+    color: #222;
+    font-size: 1.7em;
+    font-weight: 600;
+    line-height: normal;
+    margin-top: 2em;
+}
+
+#gamesh2{
+    text-align: center;
+    font-size: 1.2em;
+    font-style: italic;
+    font-family: serif;
+}
+
+#filters{
+    text-align: center;
+    margin-bottom: 1em;
+    display: inline;
+    font-weight: 600;
+}
+
+#filters h5{
+    display: inline;
+}
+
+/* games filters section */
+
+.container {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+.filterDiv {
+    float: left;
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: auto;
+    text-align: left;
+    margin-top: 1em;
+    margin-top: 0px;
+    margin-bottom: 1em;
+    display: none; /* Hidden by default */
+}
+
+.filterDiv img{
+    float: left;
+    clear: both;
+    width: 150px;
+    height: auto;
+    margin-right: 1em;
+    margin-left: .5em;
+    margin-top: .6em;
+    margin-bottom: .2em;
+    outline-style: inset;
+}
+
+.filtertxt{
+    overflow: hidden;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+.btn {
+    border: none;
+    outline: solid;
+    outline-width: thin;
+    padding: 6px 6px;
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    font-family: "Bahnschrift", Bahnschrift, sans-serif;
+    line-height: 1;
+    cursor: pointer;
+    margin-right: .5em;
+    margin-top: .5em;
+}
+
+/* Add a light grey background on mouse-over */
+.btn:hover {
+    background-color: #ddd;
+}
+
+/* Add a dark background to the active button */
+.btn.active {
+    background-color: #000000;
+    color: white;
+}
+
+/* video embed */
+
+#vidcontainer{
+    width: 100%;
+    height: 450px;
+    margin-bottom: 32px;
+}
+
+
+/* about me section */
+
+#headshot{
+    background-image: url("imgs/headshot.png"), linear-gradient(0deg, rgba(0,0,0,0), rgba(184,184,184,1));
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: left;
+    width: 200px;
+    height: 234px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2em;
+    float: left;
+    clear: both;
+}
+
+#hi{
+    font-family: "Bahnschrift", Bahnschrift, sans-serif;
+    font-size: 17px;
+    line-height: normal;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+#bio{
+    margin-top: 2em;
+    display: table;
+}
+
+#buttonrow{
+    position: relative;
+    top: 230px;
+}
+
+#buttonrow2{
+    display: flex;
+    justify-content: center;
+}
+
+.resbutton{
+    font-family: "Bahnschrift", Bahnschrift, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    padding: 6px 6px;
+    color: #fffafe;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    outline-color: #463b32;
+    outline-width: thin;
+    outline-style: solid;
+    margin-right: 15px;
+}
+
+.resbutton:hover{
+    background-color: black;
+    color: white;
+}
+
+.clearfloat{
+    clear:both;
+}
+
+/* default link color replace */
+.a2{
+    color: #ff0000;
+    margin: none;
+}
+
+.a2:hover{
+    color: #800000;
+}
+
+/* contact buttons */
+
+.contact img{
+    width:35px;
+    height: 35px;
+    opacity: 45%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 12px;
+    margin-right: auto;
+    float: left;
+    display: table;
+    
+}
+
+.contact img:hover{
+    transform: scale(1.1, 1.1);
+    opacity: 100%;
+}
+
+/* centered text color replace */
+.p2 a{
+    color: #ff0000;
+    margin: none;
+}
+
+.p2 a:hover{
+    color: #800000;
+}
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+
+  /* Fade in tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.marquee {
+    position: relative;
+    width: 100%;
+    height: 115px;
+    overflow: hidden;
+     --mask: linear-gradient(to left, 
+      rgba(0,0,0, 1) 0,   rgba(0,0,0, 1) 85%, 
+      rgba(0,0,0, 0) 95%, rgba(0,0,0, 0) 0
+  ) 100% 80% / 100% 100% repeat-x;
+  -webkit-mask: var(--mask); 
+  mask: var(--mask);
+    margin-bottom: 32px;
+}
+
+.marquee div {
+    display: flex;
+    position: absolute;
+    width: max-content;
+    animation: marquee 24s linear infinite;
+}
+
+.marquee div:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+}
+
+/* Responsive navigation menu (for mobile devices) */
+@media screen and (max-width: 600px) {
+    .topnav a, .topnav-right {
+        float: none;
+        display: block;
+        margin-top: 2px;
+    }
+  
+    .topnav-centered a {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+    }
+
+    #headshot{
+        background-repeat:no-repeat;
+        background-position: center center;
+        margin-top: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+    }
+    
+    #bio{
+        float: left;
+        margin-top: 8em;
+    }
+    
+    .reshr{
+        margin: 0px;
+        position: relative;
+        top: -10px;
+        width: 100%;
+        float: right;
+    }
+}
